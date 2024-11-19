@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title>Scriptable Script Installer</title>
+    <script>
+        // Define the App Store link and Scriptable custom URL scheme
+        const appStoreLink = "https://apps.apple.com/app/scriptable/id1405459188";
+        const scriptURL = "scriptable://import?url=https://gist.githubusercontent.com/your-username/raw/your-gist-id/script.js";
+
+        // Attempt to open Scriptable
+        window.location.href = scriptURL;
+
+        // Fallback to the App Store if Scriptable is not installed
+        setTimeout(() => {
+            window.location.href = appStoreLink;
+        }, 2000); // Adjust delay as needed
+    </script>
+</head>
+<body>
+    <h1>Redirecting...</h1>
+    <p>If you are not redirected automatically, <a href="scriptable://import?url=https://gist.githubusercontent.com/your-username/raw/your-gist-id/script.js">click here to open Scriptable</a>.</p>
+</body>
+</html>
